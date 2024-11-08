@@ -4,6 +4,7 @@ body {
     padding: 0;
     background-color: #ffffff;
     color: #333;
+    white-space: nowrap;
 }
 
 header {
@@ -83,7 +84,6 @@ a:hover {
 
 #pliny {
     margin: 10px;
-    white-space: nowrap;
 }
 #controls {
     margin: 20px;

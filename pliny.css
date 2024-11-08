@@ -83,6 +83,7 @@ a:hover {
 
 #pliny {
     margin: 10px;
+    white-space: nowrap;
 }
 #controls {
     margin: 20px;

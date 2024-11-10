@@ -3,20 +3,20 @@ function translateText() {
     const messalinaLatin = `
         <p id="latin1">
             <strong>Lines 1-8</strong><br>
-            Messalina novo et quasi insano amore incensa est.<br>
-            nam in C. Silium, iuventutis Romanae pulcherrimum, ita exarserat<br>
-            ut Iunianm Silanam, nobilem feminam, matrimonio eius<br>
-            exturbaret liberoque adultero potiretur. neque Silius flagitii<br>
-            aut periculi nescius erat: sed intellexit exitium, si abnueret,<br>
-            fore certum et, si consentiret, nonnullam facinoris celandi<br>
-            spem esse; simulque se magna praemia accepturum.<br>
-            igitur placuit neglegere futura et praesentibus frui.
+            Messalina novo et <span class="choice" title="quasi draws attention to insano - perhaps also shows T's disbelief">quasi insano</span> amore <span class="choice" title="metaphor; 'fired' suggests it is destructive">incensa est</span>.<br>
+            nam in C. Silium, iuventutis Romanae <span class="choice" title="superlative; he is the 'most beautiful'">pulcherrimum</span>, <span class="choice" title="multiple fire words building up destructive imagery">ita exarserat</span><br>
+            ut <span class="context" title="2nd woman; context for Silius' wife">Iuniam Silanam</span>, <span class="choice" title="she is noble; for context">nobilem feminam</span>, matrimonio eius<br>
+            <span class="choice" title="delayed; 'to remove' from Silius' side">exturbaret libero</span>que adultero potiretur. <span class="choice" title="double negative litotes—exaggerates that Silius knew">neque</span> Silius <span class="choice" title="crime">flagitii</span><br>
+            aut periculi <span class="choice" title="not unaware">nescius</span> erat: sed intell<span class="sound" title="repetition of syllable 'ex'">exit exit</span>ium, <span class="position" title="clauses interject here">si abnueret</span>,<br>
+            fore <span class="position" title="setting out S' choice clearly">certum</span> et, <span class="position" title="tautology emphasizes 'ruin' for Silius">si consentiret</span>, <span class="choice" title="some chance of hiding the crime">nonnullam</span> facinori<span class="sound" title="sibilance">s</span> celandi<br>
+            <span class="position" title="delay emphasises this outcome">spem</span><span class="sound" title="sibilance"> esse; simulque se</span> <span class="choice" title="great rewards">magna</span> praemia accepturum.<br>
+            <span class="sound" title="repetition of t sound">igitur placuit neglegere futura et praesentibus</span> <span class="choice" title="disgraceful—chooses enjoyment over honour and kin">frui</span>.
             <br><br><br><br>
         </p>
         <p id="latin2">
             <strong>Lines 8-17</strong><br>
-            <span style="margin-left: 300px;">illa non furtim<br></span>
-            sed multis cum comitibus ventitat domum, egredienti<br>
+            <span style="margin-left: 300px;">illa <span class="position" title="Emphatic positioning">non furtim</span><br></span>
+            sed multis cum comitibus ventitat <span class="position" title="delay of domum highlights that she is obviously going to his house">domum</span><span class="position" title="Bs are juxtabosed to show that M is with S all the time">, egredienti</span><br>
             adhaeret, dat opes honoresque; postremo servi, liberti,<br>
             paratus principis apud adulterum saepe videbantur.<br>
             at Claudius matrimonii sui ignarus.<br>
@@ -282,5 +282,6 @@ function translateText() {
         </p>
     `;
     
-    messalinaSection.innerHTML = messalinaSection.innerHTML.includes('Messalina was fired') ? messalinaLatin : messalinaEnglish;
+    messalinaSection.innerHTML = messalinaSection.innerHTML.includes('she had') ? messalinaLatin : messalinaEnglish;
 }
+

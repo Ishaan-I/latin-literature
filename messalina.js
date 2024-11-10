@@ -41,22 +41,7 @@ function translateText() {
             <span class="choice" title="M is not holding back">cuncta</span> nuptiarum sollemnia <span class="choice" title="HP - vivid">celebrat</span>.
             <br><br>
         </p>
-        <p id="latin4">
-            <strong>Lines 27-38</strong><br>
-            igitur <span class="choice" title="personification - enormity of crime">domus</span> principis <span class="choice" title="powerful CoW">inhorruit</span>, maximeque ei qui<br>
-            <span class="position" title="same structure - link between power and hope to keep power">potentiam habebant</span> timuerunt ne <span class="choice" title="vague but has big implicaitions">res</span> verterentur:<br>
-            <span class="position" title="same structure - link between power and hope to keep power">spem tamen habebant</span>, si Claudio de <span class="choice" title="hyperbolic CoW - shows worry of people with power">atrocitate</span> sceleris persuasissent,<br>
-            Messalinam posse opprimi <span class="position" title="delayed">sine quaestione</span> <span class="position" title="EP - end of clause">damnatam</span>;<br>
-            sed periculum esse ne ille defensionem audiret,<br>
-            <span class="choice" title="litotes">ne</span>ve clausae aures etiam confitenti <span class="choice" title="litotes">non</span> essent. <span class="context" title="advisor of Claudius, ex-slave, very rich">Narcissus</span>,<br>
-            occasiones quaerens, cum <span class="choice" title="variatio - more of an official title, focus on duty">Caesar</span> diu apud Ostiam moraretur,<br>
-            duas eius <span class="context" title = concubine/mistress>paelices</span> <span class="context" title="bribery, generosity">largitione</span> et <span class="sound" title="p alliteration - T dissapproves of N's calculated actions">p</span>romissis <span class="sound" title="p alliteration - T dissapproves of N's calculated actions">p</span>er<span class="sound" title="p alliteration - T dissapproves of N's calculated actions">p</span>ulit<br>
-            5 delationem subire. exim Calpurnia (id alteri paelici nomen),<br>
-            ubi datum est secretum, ad genua <span class="choice" title="use of 'Caesar' shows position of power compared to Calpurnia">Caesaris</span> <span class="choice" title="Calpurnia wants Claudius' good will at this point">provoluta</span><br>
-            <span class="position" title="shocking">nupsisse</span> <span class="choice" title="M married to Silius places her in control - scandalous">Messalinam</span><span class="position" title="emotional closeness mirrored by juxtaposition in text"> Silio</span> <span class="choice" title="powerful CoW & historic present">exclamat</span>; altera paelice<br>
-            haec confirmante, Calpurnia cieri Narcissum postulat.<br>
-            <br><br><br><br><br>
-        </p>
+        
         <p id="latin5">
             <strong>Lines 39-49</strong><br>
             'qui discidiumne tuum' inquit 'novisti? nam matrimonium<br>

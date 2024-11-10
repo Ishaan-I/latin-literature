@@ -15,45 +15,45 @@ function translateText() {
         </p>
         <p id="latin2">
             <strong>Lines 8-17</strong><br>
-            <span style="margin-left: 300px;">illa <span class="position" title="Emphatic positioning">non furtim</span><br></span>
-            sed multis cum comitibus ventitat <span class="position" title="delay of domum highlights that she is obviously going to his house">domum</span><span class="position" title="Bs are juxtabosed to show that M is with S all the time">, egredienti</span><br>
-            adhaeret, dat opes honoresque; postremo servi, liberti,<br>
-            paratus principis apud adulterum saepe videbantur.<br>
-            at Claudius matrimonii sui ignarus.<br>
-            iam Messalina propter facilitatem adulteriorum ad novas libidines<br>
-            versa est. Silius, sive fatali insania an ipsa pericula<br>
-            remedium imminentium periculorum ratus, abrumpi<br>
-            dissimulationem urgebat: quippe non exspectandum,<br>
+            <span style="margin-left: 300px;">illa <span class="choice" title="litotes">non fu</span><span class="position" title="Emphatic positioning">rtim</span><br></span>
+            sed multis cum comitibus <span class="choice" title="historic present - more vivid">ventitat</span> <span class="position" title="delay of domum highlights that she is obviously going to his house">domum</span><span class="position" title="Bs are juxtabosed to show that M is with S all the time">, egredienti</span><br>
+            adhaeret, dat opes honoresque; postremo <span class="choice" title="tricolon">servi, liberti,</span><br>
+            <span class="sound" title="condemnation through p sounds">p</span><span class="choice" title="3rd part of tricolon is different - surprising">aratus</span> <span class="sound" title="condemnation through p sounds">p</span><span class="choice" title="reminder of adultery">rincipis</span> apud adulterum saepe videbantur.<br>
+            at Claudius matrimonii sui <span class="choice" title="variatio - different to nescius in previous passage">ignarus</span>. iam Messalina <span class="position" title="balanced phrasing">propter facilitatem</span><br>
+            <span class="position" title="balanced phrasing">adulteriorum ad novas </span><span class="choice" title="strong CoW">libidines</span><br>
+            versa est. Silius, sive <span class="choice" title="strong CoW">fatali</span> <span class="choice" title="strong CoW">insania</span> an ipsa <span class="choice" title="polyptoton">pericula</span><br>
+            re<span class="sound" title="solemn gloomy tone through m sounds">m</span>ediu<span class="sound" title="solemn gloomy tone through m sounds">m</span> i<span class="sound" title="solemn gloomy tone through m sounds">mm</span>inentiu<span class="sound" title="solemn gloomy tone through m sounds">m</span> <span class="choice" title="polyptoton">periculoru</span><span class="sound" title="solemn gloomy tone through m sounds">m</span> ratus, <span class="position" title="EP, promoted - focus on action & intensity">abrumpi</span><br>
+            dissimulationem <span class="choice" title="forceful CoW">urgebat</span>: quippe non exspectandum,<br>
             dum princeps senesceret.
             <br><br>
         </p>
         <p id="latin3">
             <strong>Lines 17-26</strong><br>
-            <span style="margin-left: 250px;">se caelibem, orbum, nuptis</span><br>
-            et adoptando Britannico paratum. eandem Messalinae potentiam<br>
+            <span style="margin-left: 250px;"><span class="context" title="Silius">se</span> <span class="choice" title="tricolon & asyndeton making S a better candidate">caelibem, orbum, nuptis</span></span><br>
+            <span class="choice" title="tricolon & asyndeton making S a better candidate">et adoptando Britannico paratum</span>. eandem Messalinae potentiam<br>
             mansuram esse, addita securitate, si praevenirent Claudium.<br>
-            qui insidiis incautus sed ad iram celer esset.<br>
-            Messalina, non amore in maritum, sed verita ne Silius<br>
-            summa adeptus se sperneret, diu haesitavit; sed tandem<br>
-            persuasum. nomen enim matrimonii concupivit<br>
-            ob magnítudinem infamiae. nec ultra morata<br>
-            quam dum sacrificii gratia Claudius Ostiam proficisceretur,<br>
-            cuncta nuptiarum sollemnia celebrat.
+            qui <span class="sound" title="assonance adds emphasis">i</span><span class="choice" title="meaning of words shows totally unaware">ns</span><span class="sound" title="assonance adds emphasis">i</span><span class="choice" title="meaning of words shows totally unaware">d</span><span class="sound" title="assonance adds emphasis">ii</span><span class="choice" title="meaning of words shows totally unaware">s</span> <span class="sound" title="assonance adds emphasis">i</span><span class="choice" title="meaning of words show totally unaware">ncautus</span> sed ad <span class="position" title="balanced phrasing - increases contrast & potential irony">iram celer</span> esset.<br>
+            Messalina, <span class="choice" title="sarcastic?">non amore in maritum</span>, sed verita ne Siliu<span class="sound" title="sibilance - sinister or drawing out the sentence">s</span><br>
+            <span class="sound" title="sibilance - sinister or drawing out the sentence">s</span>umma adeptu<span class="sound" title="sibilance - sinister or drawing out the sentence">s</span> <span class="sound" title="sibilance - sinister or drawing out the sentence">s</span>e <span class="sound" title="sibilance - sinister or drawing out the sentence">s</span>perneret, diu haesitavit; <span class="position" title="short dramatic clause">sed tandem</span><br>
+            <span class="position" title="EP">persuasum</span>. nomen enim <span class="choice" title="variatio (nuptiis was used earlier)">matrimonii</span> <span class="choice" title="uncontrollable - powerful CoW">concupivit</span><br>
+            ob magnítudinem <span class="choice" title="powerful CoW">infa</span><span class="context" title="ignominy = disgrace">miae</span>. nec ultra morata<br>
+            quam <span class="choice" title="Claudius is being pious, M is taking advantage of this">dum sacrificii gratia</span> Claudius <span class="context" title="port close to Rome">Ostiam</span> proficisceretur,<br>
+            <span class="choice" title="M is not holding back">cuncta</span> nuptiarum sollemnia <span class="choice" title="HP - vivid">celebrat</span>.
             <br><br>
         </p>
         <p id="latin4">
             <strong>Lines 27-38</strong><br>
-            igitur domus principis inhorruit, maximeque ei qui<br>
-            potentiam habebant timuerunt ne res verterentur:<br>
-            spem tamen habebant, si Claudio de atrocitate sceleris persuasissent,<br>
-            Messalinam posse opprimi sine quaestione damnatam;<br>
+            igitur <span class="choice" title="personification - enormity of crime">domus</span> principis <span class="choice" title="powerful CoW">inhorruit</span>, maximeque ei qui<br>
+            <span class="position" title="same structure - link between power and hope to keep power">potentiam habebant</span> timuerunt ne <span class="choice" title="vague but has big implicaitions">res</span> verterentur:<br>
+            <span class="position" title="same structure - link between power and hope to keep power">spem tamen habebant</span>, si Claudio de <span class="choice" title="hyperbolic CoW - shows worry of people with power">atrocitate</span> sceleris persuasissent,<br>
+            Messalinam posse opprimi <span class="position" title="delayed">sine quaestione</span> <span class="position" title="EP - end of clause">damnatam</span>;<br>
             sed periculum esse ne ille defensionem audiret,<br>
-            neve clausae aures etiam confitenti non essent. Narcissus,<br>
-            occasiones quaerens, cum Caesar diu apud Ostiam moraretur,<br>
-            duas eius paelices largitione et promissis perpulit<br>
+            <span class="choice" title="litotes">ne</span>ve clausae aures etiam confitenti <span class="choice" title="litotes">non</span> essent. <span class="context" title="advisor of Claudius, ex-slave, very rich">Narcissus</span>,<br>
+            occasiones quaerens, cum <span class="choice" title="variatio - more of an official title, focus on duty">Caesar</span> diu apud Ostiam moraretur,<br>
+            duas eius <span class="context" title = concubine/mistress>paelices</span> <span class="context" title="bribery, generosity">largitione</span> et <span class="sound" title="p alliteration - T dissapproves of N's calculated actions">p</span>romissis <span class="sound" title="p alliteration - T dissapproves of N's calculated actions">p</span>er<span class="sound" title="p alliteration - T dissapproves of N's calculated actions">p</span>ulit<br>
             5 delationem subire. exim Calpurnia (id alteri paelici nomen),<br>
-            ubi datum est secretum, ad genua Caesaris provoluta<br>
-            nupsisse Messalinam Silio exclamat; altera paelice<br>
+            ubi datum est secretum, ad genua <span class="choice" title="use of 'Caesar' shows position of power compared to Calpurnia">Caesaris</span> <span class="choice" title="Calpurnia wants Claudius' good will at this point">provoluta</span><br>
+            <span class="position" title="shocking">nupsisse</span> <span class="choice" title="M married to Silius places her in control - scandalous">Messalinam</span><span class="position" title="emotional closeness mirrored by juxtaposition in text"> Silio</span> <span class="choice" title="powerful CoW & historic present">exclamat</span>; altera paelice<br>
             haec confirmante, Calpurnia cieri Narcissum postulat.<br>
             <br><br><br><br><br>
         </p>

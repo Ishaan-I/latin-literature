@@ -59,7 +59,7 @@ function translateText() {
         </p>
         <p id="latin5">
             <strong>Lines 39-49</strong><br>
-            qui discidiumne tuum' inquit 'novisti? nam matrimonium<br>
+            'qui discidiumne tuum' inquit 'novisti? nam matrimonium<br>
             Silii vidit populus et senatus et milites; ac nisi celeriter agis,<br>
             tenet urbem maritus.'<br>
             non solum rumor interea, sed undique nuntii ad Messalinam<br>

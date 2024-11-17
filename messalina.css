@@ -1,10 +1,10 @@
 body {
     font-family: Arial, sans-serif;
-    width: 130vw;
     margin: 0;
     padding: 0;
     background-color: #ffffff;
     color: #333;
+    z-index: 1;
 }
 
 header {
@@ -21,6 +21,7 @@ header {
 }
 h1 {
     font-size: 20px;
+    padding: 0px;
 }
 h4 {
     margin: 0;
@@ -32,38 +33,41 @@ strong {
     color: gray;
 }
 
-button {
-    background-color: white; /* Background color of the button */
-    color: #45a049; /* Text color */
-    border: none; /* Removes border */
-    padding: 10px 10px; /* Adjusts padding for pill shape */
-    text-align: center; /* Centers text */
-    text-decoration: none; /* Removes underline from links if used */
-    display: inline-block; /* Ensures proper button layout */
-    font-size: 16px; /* Font size of the text */
-    cursor: pointer; /* Changes cursor to pointer on hover */
-    border-radius: 50px; /* Creates the pill shape */
-    transition: transform 0.3s ease; /* Adds smooth hover effect */
-  }
- button:hover {
-    transform: scale(1.1); /* Darkens the button on hover */
-  }
-
-  a {
-    background-color: white; /* Background color of the button */
-    color: #45a049; /* Text color */
-    border: none; /* Removes border */
-    padding: 10px 10px; /* Adjusts padding for pill shape */
-    text-align: center; /* Centers text */
-    text-decoration: none; /* Removes underline from links if used */
-    display: inline-block; /* Ensures proper button layout */
-    font-size: 16px; /* Font size of the text */
-    cursor: pointer; /* Changes cursor to pointer on hover */
-    border-radius: 50px; /* Creates the pill shape */
-    transition: transform 0.3s ease; /* Adds smooth hover effect */
+.pill-container {
+    display: inline-flex;
+    background-color: #45a049;
+    padding: none;
+    border-radius: 50px;
+    gap: 2px; /* Space between buttons/links */
+    margin: 5px;
 }
-a:hover {
-    transform: scale(1.1); /* Increase size by 10% on hover */
+.l-button {
+    background-color: white;
+    color: #45a049;
+    text-decoration: none;
+    border: none;
+    padding: 8px 8px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 20px 0px 0px 20px;
+    transition: background-color 0.3s ease;
+}
+.r-button {
+    background-color: white;
+    color: #45a049;
+    text-decoration: none;
+    border: none;
+    padding: 8px 8px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 0px 20px 20px 0px;
+    transition: background-color 0.3s ease;
+}
+.l-button:hover {
+    background-color: lightgray; /* Darkens the button on hover */
+}
+.r-button:hover {
+    background-color: lightgray; /* Darkens the button on hover */
 }
 
 #key {
@@ -83,7 +87,41 @@ a:hover {
 #messalina {
     margin: 10px;
     white-space: nowrap;
+    line-height: 20px;
 }
+
+#latin1 {
+    margin-bottom: 4.15em;
+}
+#latin2 {
+    margin-bottom: 1.15em;
+}
+#latin3 {
+    margin-bottom: -1.3em;
+}
+#latin4 {
+    margin-bottom: 6.85em;
+}
+#latin5 {
+    margin-bottom: 6.3em;
+}
+#latin6 {
+    margin-bottom: 6em;
+}
+#latin7 {
+    margin-bottom: 5.6em;
+}
+#latin8 {
+    margin-bottom: 4.4em;
+}
+#latin9 {
+    margin-bottom: 4.6em;
+}
+
+p br {
+    padding: 10px;
+}
+
 #controls {
     margin: 20px;
 }
@@ -92,121 +130,89 @@ a:hover {
     display: none;
 }
 
-.sound {
+.sound, .position, .choice, .context {
     position: relative;
     display: inline-block;
-    background-color: lightblue;
-    border-radius: 3px;
-    padding-left: 1px;
-    padding-right:1px;
-}
-.position {
-    position: relative;
-    display: inline-block;
-    background-color: lightgreen;
-    border-radius: 3px;
-    padding-left: 1px;
-    padding-right:1px;
-}
-.choice {
-    position: relative;
-    display: inline-block;
-    background-color: lightpink;
-    border-radius: 3px;
-    padding-left: 1px;
-    padding-right:1px;
-}
-.context {
-    position: relative;
-    display: inline-block;
-    background-color: lightgrey;
-    border-radius: 3px;
-    padding-left: 1px;
-    padding-right:1px;
+    border-radius: 4px;
+    padding: 1px;
+    color: #333; /* Ensure this color contrasts with the background */
+    z-index: 3; /* Base layer for the text */
 }
 
-.sound:hover {
-    background-color: deepskyblue;
-}
-.position:hover {
-    background-color: mediumspringgreen;
-}
-.choice:hover {
-    background-color: hotpink;
-}
-.context:hover {
-    background-color: darkgrey;
+.sound {background-color: lightblue;}
+.position {background-color: lightgreen;}
+.choice {background-color: lightpink;}
+.context {background-color: lightgrey;}
+
+.sound:hover {background-color: deepskyblue;}
+.position:hover {background-color: mediumspringgreen;}
+.choice:hover {background-color: hotpink;}
+.context:hover {background-color: darkgrey;}
+
+.sound:hover::after, 
+.position:hover::after, 
+.choice:hover::after, 
+.context:hover::after { 
+    content: attr(title);
+    position: absolute;
+    line-height: 18px;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 12px;
+    opacity: 1;
+    transition: opacity 0.3s;
+    z-index: 10; /* Ensures tooltip appears above everything */
+    
+    /* Positioning tooltip above the word */
+    left: 0; /* Aligns the tooltip's start with the word's start */
+    bottom: 120%; /* Places tooltip above the word */
+    transform: none; /* Removes horizontal translation */
 }
 
 .sound:hover::after {
-    content: attr(title);
-    position: absolute;
-    transform: translateX(0%);
-    background-color: rgb(154, 204, 224);
-    color: rgb(19, 64, 114);
-    padding: 3px;
-    border-radius: 5px;
-    border: 2px solid rgb(19, 64, 114);
-    outline-width: 3px;
-    font-size: 12px;
-    opacity: 1;
-    left: 0%;
-    bottom: 90%;
-    transition: opacity 0.3s;
-    margin-bottom: 5px;
-  }
-.position:hover::after {
-    content: attr(title);
-    position: absolute;
-    transform: translateX(0%);
-    background-color: #C5E7C2;
-    color: #2A5636;
-    padding: 3px;
-    border-radius: 5px;
-    border: 2px solid #2A5636;
-    outline-width: 3px;
-    font-size: 12px;
-    opacity: 1;
-    left: 0%;
-    bottom: 90%; /* Position this tooltip slightly lower */
-    transition: opacity 0.3s;
-    margin-bottom: 5px;
-  }
-.choice:hover::after {
-    content: attr(title);
-    position: absolute;
-    transform: translateX(0%);
-    background-color: #FAE1E3;
-    color: #832132;
-    padding: 3px;
-    border-radius: 5px;
-    border: 2px solid #832132;
-    outline-width: 3px;
-    font-size: 12px;
-    opacity: 1;
-    left: 0%;
-    bottom: 90%;
-    transition: opacity 0.3s;
-    margin-bottom: 5px;
-  }
-.context:hover::after {
-    content: attr(title);
-    position: absolute;
-    transform: translateX(0%);
-    background-color: #D6D6D6;
-    color: #4A4A4A;
-    padding: 3px;
-    border-radius: 5px;
-    border: 2px solid #4A4A4A;
-    outline-width: 3px;
-    font-size: 12px;
-    opacity: 1;
-    left: 0%;
-    bottom: 90%; /* Position this tooltip slightly lower */
-    transition: opacity 0.3s;
-    margin-bottom: 5px;
-  }
+    background-color: #BFE2F7;
+    color: #093049;
+    border: 1px solid #093049;
+}
 
+.position:hover::after {
+    background-color: #e4ffde;
+    color: #215B26;
+    border: 1px solid #215B26;
+}
+
+.choice:hover::after {
+    background-color: #ffdef3;
+    color: #4c1538;
+    border: 1px solid #4c1538;
+}
+
+.context:hover::after {
+    background-color: #d7dce5;
+    color: #28303E;
+    border: 1px solid #28303E;
+}
+
+
+.translation-number {
+    font-size: 14px;
+    color: grey;
+    background-color: hsla(0, 0%, 100%, 0.637);
+    border: 1px solid slategrey;
+    line-height: 20px;
+    padding-left: 1px;
+    padding-right: 1px;
+    border-radius: 4px;
+    margin-right: 1px;
+    margin-left: 1.5px;
+    position: relative;
+    transform: translateY(-0.5em);
+    display: none; /* Hidden by default */
+    z-index: 3;
+}
+.guided-on .translation-number {
+    display: inline;
+}
 
 #paragraphSelector {
     padding: 10px;

@@ -10,70 +10,84 @@
 </head>
 <body>
     <header>
-        <h1>Aeneid - Lines 12 - 123</h1>
-        <button onclick="translateText()">Translate</button>
-        <a href="index.html">Home</a>
-        <a href="avocab.html">Vocab</a>
+        <h1>Messalina - Lines 12 - 123</h1>
+        <div class="pill-container">
+            <button class="l-button" onclick="translateText()">Translate</button>
+            <button class="r-button" onclick="toggleGuidedTranslation()">Toggle Guided Translation</button>
+        </div>
+        <div class="pill-container">
+            <a class="l-button" href="index.html">Home</a>
+            <a class="r-button" href="avocab.html">Vocab</a>
+        </div>
     </header>
+  <div id="false-header">
+    <h1>Messalina - Lines 12 - 123</h1>
+        <div class="pill-container">
+            <button class="l-button" onclick="translateText()">Translate</button>
+            <button class="r-button" onclick="toggleGuidedTranslation()">Toggle Guided Translation</button>
+        </div>
+        <div class="pill-container">
+            <a class="l-button" href="index.html">Home</a>
+            <a class="r-button" href="mvocab.html">Vocab</a>
+        </div>
+  </div>
+  
+    <div id="content">
     <div id="key">
-        <br><br><br><br><br><br><br>
         <strong>Word Type Key:</strong><br>
         <ul>
-            <li><span class="noun">Noun</span><br></li>
-            <li><span class="verb">Verb</span><br></li>
-            <li><span class="adj">Adjective</span><br></li>
-            <li><span class="adv">Adverb</span><br></li>
-            <li><span class="pro">Pronoun</span><br></li>
-            <li><span class="pre">Preposition</span><br></li>
-            <li><span class="con">Conjunction</span></li>
+            <li><span class="sound" title="refers to literary techniques involving how the words are pronounced">Sound</span><br></li>
+            <li><span class="choice" title="refers to literary techniques involving what kinds of words are used">Choice of Words</span><br></li>
+            <li><span class="position" title="refers to literary techniques involving where a word is placed">Position</span><br></li>
+            <li><span class="context" title="gives explanations on characters and certain words">Context</span><br></li>
         </ul>
     </div>
 
     <div id="aeneid">
         <p id="latin1">
             <strong>Lines 12-22</strong><br>
-            <span class="noun">urbs</span> <span class="adj">antiqua</span> <span class="verb">fuit</span>, <span class="noun">Tyrii</span> <span class="verb">tenuere</span> <span class="noun">coloni</span>,<br>
-            <span class="noun">Karthago</span>, <span class="noun">Italiam</span> <span class="pre">contra</span> <span class="noun">Tiberina</span><span class="con">que</span> <span class="adj">longe</span><br>
-            <span class="noun">ostia</span>, <span class="adj">dives</span> <span class="noun">opum</span> <span class="noun">studiis</span><span class="con">que</span> <span class="adj">asperrima</span> <span class="noun">belli</span>;<br>
-            <span class="pro">quam</span> <span class="noun">Iuno</span> <span class="verb">fertur</span> <span class="noun">terris</span> <span class="adv">magis</span> <span class="adj">omnibus</span> <span class="adv">unam</span><br>
-            <span class="verb">posthabita</span> <span class="verb">coluisse</span> <span class="noun">Samo</span>; <span class="noun">hic</span> <span class="noun">illius</span> <span class="noun">arma</span>,<br>
-            <span class="noun">hic</span> <span class="noun">currus</span> <span class="verb">fuit</span>; <span class="noun">hoc</span> <span class="noun">regnum</span> <span class="noun">dea</span> <span class="noun">gentibus</span> <span class="verb">esse</span>,<br>
-            <span class="con">si</span> <span class="adv">qua</span> <span class="noun">fata</span> <span class="verb">sinant</span>, <span class="adv">iam</span> <span class="adv">tum</span> <span class="verb">tendit</span><span class="con">que</span> <span class="verb">fovet</span><span class="con">que</span>.<br>
-            <span class="noun">progeniem</span> <span class="con">sed</span> <span class="adv">enim</span> <span class="noun">Troiano</span> <span class="pre">a</span> <span class="noun">sanguine <span class="verb">duci<br>
-            <span class="verb">audierat</span>, <span class="noun">Tyrias</span> olim quae <span class="verb">verteret</span> <span class="noun">arces</span>;<br>
-            <span class="adv">hinc</span> <span class="noun">populum</span> <span class="adv">late</span> <span class="verb">regem</span> <span class="noun">bello</span><span class="con">que</span> <span class="adj">superbum</span><br>
-            <span class="verb">venturum</span> <span class="verb">excidio</span> <span class="noun">Libyae</span>: <span class="adv">sic</span> <span class="verb">volvere</span> <span class="noun">Parcas</span>.<br>
+            <span class="position" title="empharic positioning"><span class="translation-number">3</span>urbs</span> <span class="choice" title="important rich history"><span class="translation-number">2</span>antiqua</span> <span class="translation-number">1</span>fuit, (<span class="translation-number">4</span>Tyrii <span class="translation-number">6</span>tenuere <span class="context" title="Tyre"><span class="translation-number">5</span>coloni</span>),<br>
+            <span class="translation-number">7</span>Karthago, <span class="translation-number">9</span>Italiam <span class="translation-number">8</span>contra <span class="translation-number">12</span>Tiberina<span class="translation-number">10</span>que <span class="translation-number">13</span>longe<br>
+            <span class="translation-number">11</span>ostia, <span class="translation-number">14</span>dives <span class="translation-number">15</span>opum <span class="translation-number">18</span>studiis<span class="translation-number">16</span>que <span class="translation-number">17</span>asperrima <span class="translation-number">19</span>belli;<br>
+            <span class="translation-number">20</span>quam <span class="translation-number">22</span>Iuno <span class="translation-number">23</span>fertur <span class="translation-number">27</span>terris <span class="translation-number">25</span>magis <span class="translation-number">26</span>omnibus <span class="translation-number">21</span>unam<br>
+            <span class="translation-number">29</span>posthabita <span class="translation-number">24</span>coluisse <span class="translation-number">28</span>Samo; <span class="translation-number">1</span>hic <span class="translation-number">4</span>illius <span class="translation-number">3</span>arma,<br>
+            <span class="translation-number">5</span>hic <span class="translation-number">6</span>currus <span class="translation-number">2</span>fuit; <span class="translation-number">8</span>hoc <span class="translation-number">10</span>regnum <span class="translation-number">3</span>dea <span class="translation-number">11</span>gentibus <span class="translation-number">9</span>esse,<br>
+            <span class="translation-number">12</span>si <span class="translation-number">15</span>qua <span class="translation-number">13</span>fata <span class="translation-number">14</span>sinant, <span class="translation-number">1</span>iam <span class="translation-number">2</span>tum <span class="translation-number">5</span>tendit<span class="translation-number">4</span>que <span class="translation-number">7</span>fovet<span class="translation-number">6</span>que.<br>
+            <span class="translation-number">4</span>progeniem <span class="translation-number">1</span>sed <span class="translation-number">2</span>enim <span class="translation-number">7</span>Troiano <span class="translation-number">6</span>a <span class="translation-number">8</span>sanguine <span class="translation-number">5</span>duci<br>
+            <span class="translation-number">3</span>audierat, <span class="translation-number">11</span>Tyrias <span class="translation-number">13</span>olim <span class="translation-number">9</span>quae <span class="translation-number">10</span>verteret <span class="translation-number">12</span>arces;<br>
+            <span class="translation-number">1</span>hinc <span class="translation-number">2</span>populum <span class="translation-number">5</span>late <span class="translation-number">4</span>regem <span class="translation-number">8</span>bello<span class="translation-number">6</span>que <span class="translation-number">7</span>superbum<br>
+            <span class="translation-number">3</span>venturum <span class="translation-number">9</span>excidio <span class="translation-number">10</span>Libyae: <span class="translation-number">1</span>sic <span class="translation-number">3</span>volvere <span class="translation-number">2</span>Parcas.<br>
             <br>
         </p>
         <p id="latin2">
             <strong>Lines 23-33</strong><br>
-            Id metuens, veterisque memor Saturnia belli,<br>
-            prima quod ad Troiam pro caris gesserat Argis—<br>
-            necdum etiam causae irarum saevique dolores<br>
-            exciderant animo: manet alta mente repostum<br>
-            iudicium Paridis spretaeque iniuria formae,<br>
-            et genus invisum, et rapti Ganymedis honores.<br>
-            His accensa super, iactatos aequore toto<br>
-            Troas, reliquias Danaum atque immitis Achilli,<br>
-            arcebat longe Latio, multosque per annos<br>
-            errabant, acti fatis, maria omnia circum.<br>
-            Tantae molis erat Romanam condere gentem!<br>
+            <span class="translation-number">3</span>Id <span class="translation-number">2</span><span class="sound" title="m assonance is solemn/sad">m</span>etuens, <span class="translation-number">6</span>veteris<span class="translation-number">4</span>que <span class="translation-number">5</span><span class="sound" title="m assonance is solemn/sad">m</span>e<span class="sound" title="m assonance is solemn/sad">m</span>or <span class="translation-number">1</span>Saturnia <span class="translation-number">7</span>belli,<br>
+            <span class="translation-number">9</span>prima <span class="translation-number">8</span>quod <span class="translation-number">11</span>ad <span class="translation-number">12</span>Troiam <span class="translation-number">13</span>pro <span class="translation-number">14</span>caris <span class="translation-number">10</span>gesserat <span class="translation-number">15</span>Argis—<br>
+            <span class="translation-number">7</span>necdum <span class="translation-number">1</span>etiam <span class="translation-number">2</span>causae <span class="translation-number">3</span>irarum <span class="translation-number">5</span>saevi<span class="translation-number">4</span>que <span class="translation-number">6</span>dolores<br>
+            <span class="translation-number">8</span>exciderant <span class="translation-number">9</span>animo: <span class="translation-number">14</span>manet <span class="translation-number">16</span>alta <span class="translation-number">17</span>mente <span class="translation-number">15</span>repostum<br>
+            <span class="translation-number">1</span>iudicium <span class="translation-number">2</span>Paridis <span class="translation-number">5</span>spretae<span class="translation-number">3</span>que <span class="translation-number">4</span>iniuria <span class="translation-number">6</span>formae,<br>
+            <span class="translation-number">7</span>et <span class="translation-number">9</span>genus <span class="translation-number">8</span>invisum, <span class="translation-number">10</span>et <span class="translation-number">12</span>rapti <span class="translation-number">13</span>Ganymedis <span class="translation-number">11</span>honores.<br>
+            <span class="translation-number">2</span>His <span class="translation-number">1</span>accensa <span class="translation-number">3</span>super, <span class="translation-number">6</span>iactatos <span class="translation-number">8</span>aequore <span class="translation-number">7</span>toto<br>
+            <span class="translation-number">5</span>Troas, <span class="translation-number">9</span>reliquias <span class="translation-number">10</span>Danaum <span class="translation-number">11</span>atque <span class="translation-number">12</span>immitis <span class="translation-number">13</span>Achilli,<br>
+            <span class="translation-number">4</span>arcebat <span class="translation-number">14</span>longe <span class="translation-number">15</span>Latio, <span class="translation-number">18</span>multos<span class="translation-number">16</span>que <span class="translation-number">17</span>per <span class="translation-number">19</span>annos<br>
+            <span class="translation-number">20</span>errabant, <span class="translation-number">21</span>acti <span class="translation-number">22</span>fatis, <span class="translation-number">25</span>maria <span class="translation-number">24</span>omnia <span class="translation-number">23</span>circum.<br>
+            <span class="translation-number">2</span>Tantae <span class="translation-number">3</span>molis <span class="translation-number">1</span>erat <span class="translation-number">5</span>Romanam <span class="translation-number">4</span>condere <span class="translation-number">6</span>gentem!<br>
             <br><br>
         </p>
         <p id="latin3">
             <strong>Lines 34-45</strong><br>
-            Vix e conspectu Siculae telluris in altum<br>
-            vela dabant laeti, et spumas salis aere ruebant,<br>
-            cum Iuno, aeternum servans sub pectore volnus,<br>
-            haec secum: 'Mene incepto desistere victam,<br>
-            nec posse Italia Teucrorum avertere regem?<br>
-            Quippe vetor fatis. Pallasne exurere classem<br>
-            Argivom atque ipsos potuit submergere ponto,<br>
-            unius ob noxam et furias Aiacis Oilei?<br>
-            Ipsa, Iovis rapidum iaculata e nubibus ignem,<br>
-            disiecitque rates evertitque aequora ventis,<br>
-            illum expirantem transfixo pectore flammas<br>
-            turbine corripuit scopuloque infixit acuto.<br>
+            <span class="translation-number">1</span>Vix <span class="translation-number">2</span>e <span class="translation-number">3</span>conspectu <span class="translation-number">5</span>Siculae <span class="translation-number">4</span>telluris <span class="translation-number">8</span>in <span class="translation-number">9</span>altum<br>
+            <span class="translation-number">6</span>vela dabant <span class="translation-number">7</span>laeti, <span class="translation-number">10</span>et <span class="translation-number">12</span>spumas <span class="translation-number">13</span>salis <span class="translation-number">14</span>aere <span class="translation-number">11</span>ruebant,<br>
+            <span class="translation-number">15</span>cum <span class="translation-number">16</span>Iuno, <span class="translation-number">18</span>aeternum <span class="translation-number">17</span>servans <span class="translation-number">20</span>sub <span class="translation-number">21</span>pectore <span class="translation-number">19</span>vulnus,<br>
+            <span class="translation-number">22</span>haec <span class="translation-number">23</span>secum: '<span class="translation-number">2</span>Me<span class="translation-number">1</span>ne <span class="translation-number">5</span>incepto <span class="translation-number">4</span>desistere <span class="translation-number">3</span>victam,<br>
+            <span class="translation-number">6</span>nec <span class="translation-number">7</span>posse <span class="translation-number">11</span>Italia <span class="translation-number">10</span>Teucrorum <span class="translation-number">8</span>avertere <span class="translation-number">9</span>regem?<br>
+            <span class="translation-number">1</span>Quippe <span class="translation-number">2</span>vetor <span class="translation-number">3</span>fatis. <span class="translation-number">2</span>Pallas<span class="translation-number">1</span>ne <span class="translation-number">4</span>exurere <span class="translation-number">5</span>classem<br>
+            <span class="translation-number">6</span>Argivom <span class="translation-number">7</span>atque <span class="translation-number">9</span>ipsos <span class="translation-number">3</span>potuit <span class="translation-number">8</span>submergere <span class="translation-number">10</span>ponto,<br>
+            <span class="translation-number">13</span>unius <span class="translation-number">11</span>ob <span class="translation-number">12</span>noxam <span class="translation-number">14</span>et <span class="translation-number">15</span>furias <span class="translation-number">16</span>Aiacis <span class="translation-number">17</span>Oilei?<br>
+            <span class="translation-number">1</span>Ipsa, <span class="translation-number">5</span>Iovis <span class="translation-number">3</span>rapidum <span class="translation-number">2</span>iaculata <span class="translation-number">6</span>e <span class="translation-number">7</span>nubibus <span class="translation-number">4</span>ignem,<br>
+            <span class="translation-number">9</span>disiecit<span class="translation-number">8</span>que <span class="translation-number">10</span>rates <span class="translation-number">12</span>evertit<span class="translation-number">11</span>que <span class="translation-number">13</span>aequora <span class="translation-number">14</span>ventis,<br>
+            <span class="translation-number">1</span>illum <span class="translation-number">2</span>expirantem <span class="translation-number">4</span>transfixo <span class="translation-number">5</span>pectore <span class="translation-number">3</span>flammas<br>
+            <span class="translation-number">11</span>turbine <span class="translation-number">6</span>corripuit <span class="translation-number">11</span>scopulo<span class="translation-number">8</span>que <span class="translation-number">9</span>infixit <span class="translation-number">10</span>acuto.<br>
             <br><br>
         </p>
         <p id="latin4">

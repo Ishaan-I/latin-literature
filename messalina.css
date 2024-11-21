@@ -1,25 +1,35 @@
 body {
     font-family: Arial, sans-serif;
-    width: 725px;
     margin: 0;
     padding: 0;
-    background-color: #ffffff;
-    color: #333;
+    background-color: #212630;
+    color: white;
     z-index: 1;
+    width: 725px;
 }
 
 header {
     position: fixed;
-    margin-top: 0px;
-    width: 100%;
-    background-color: #4CAF50;
+    margin-top: -20px;
+    width: 100vw;
+    background-color: #363f52;
     box-sizing: border-box;
     padding: 10px;
     font-size: 15px;
     text-align: center;
     color: white;
+    backdrop-filter: blur(3px);
+    box-shadow: 0 7px 10px rgba(0, 0, 0, 0.5);
     z-index: 1000;
 }
+
+#false-header {
+    position: relative;
+    margin-top: 20px;
+    width: 100vw;
+    z-index: 2;
+}
+
 h1 {
     font-size: 20px;
     padding: 0px;
@@ -29,46 +39,42 @@ h4 {
     padding: 0;
 }
 strong {
+    font-family: Arial, sans-serif;
     font-size: 20px;
-    font-weight: normal;
-    color: gray;
+    font-weight: medium;
+    color: white;
 }
+
 
 .pill-container {
     display: inline-flex;
-    background-color: #45a049;
     padding: none;
     border-radius: 50px;
     gap: 2px; /* Space between buttons/links */
     margin: 5px;
 }
-.l-button {
-    background-color: white;
-    color: #45a049;
+
+.l-button, .r-button {
+    background-color: #212630;
+    color: white;
     text-decoration: none;
     border: none;
     padding: 8px 8px;
     font-size: 16px;
     cursor: pointer;
-    border-radius: 20px 0px 0px 20px;
-    transition: background-color 0.3s ease;
+    font-weight: bold;
+    border: 3px #1fcd54 solid;
+    transition: background-color 0.2s ease, border 0.2s ease;
+}
+.l-button {
+    border-radius: 20px 3px 3px 20px;
 }
 .r-button {
-    background-color: white;
-    color: #45a049;
-    text-decoration: none;
-    border: none;
-    padding: 8px 8px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 0px 20px 20px 0px;
-    transition: background-color 0.3s ease;
+    border-radius: 3px 20px 20px 3px;
 }
-.l-button:hover {
-    background-color: lightgray; /* Darkens the button on hover */
-}
-.r-button:hover {
-    background-color: lightgray; /* Darkens the button on hover */
+.l-button:hover, .r-button:hover {
+    background-color: #1fcd54;
+    border: 3px #212630 solid;
 }
 
 #key {
@@ -91,36 +97,37 @@ strong {
     line-height: 20px;
 }
 
-#latin1 {
-    margin-bottom: 4.15em;
+#latin1, #english1 {
+    height: 240px;
 }
-#latin2 {
-    margin-bottom: 1.15em;
+#latin2, #english2 {
+    height: 240px;
 }
-#latin3 {
-    margin-bottom: -1.3em;
+#latin3, #english3 {
+    height: 240px;
 }
-#latin4 {
-    margin-bottom: 6.85em;
+#latin4, #english4 {
+    height: 360px;
 }
-#latin5 {
-    margin-bottom: 6.3em;
+#latin5, #english5 {
+    height: 320px;
 }
-#latin6 {
-    margin-bottom: 6em;
+#latin6, #english6 {
+    height: 320px;
 }
-#latin7 {
-    margin-bottom: 5.6em;
+#latin7, #english7 {
+    height: 300px;
 }
-#latin8 {
-    margin-bottom: 4.4em;
+#latin8, #english8 {
+    height: 280px;
 }
-#latin9 {
-    margin-bottom: 4.6em;
+#latin9, #english9 {
+    height: 300px;
 }
 
-p br {
-    padding: 10px;
+
+#content {
+    margin-top: 25px;
 }
 
 #controls {
@@ -140,26 +147,36 @@ p br {
     z-index: 3; /* Base layer for the text */
 }
 
-.sound {background-color: lightblue;}
-.position {background-color: lightgreen;}
-.choice {background-color: lightpink;}
-.context {background-color: lightgrey;}
+.sound {
+  background-color: rgb(118, 205, 235);
+}
+.position {
+  background-color: lightgreen;
+}
+.choice {
+  background-color: lightpink;
+}
+.context {
+  background-color: #b8cadb;
+}
 
 .sound:hover {background-color: deepskyblue;}
 .position:hover {background-color: mediumspringgreen;}
 .choice:hover {background-color: hotpink;}
-.context:hover {background-color: darkgrey;}
+.context:hover {background-color: lightslategrey;}
 
 .sound:hover::after, 
 .position:hover::after, 
 .choice:hover::after, 
 .context:hover::after { 
     content: attr(title);
+    white-space: nowrap;
     position: absolute;
     line-height: 18px;
     padding: 5px;
     border-radius: 5px;
     font-size: 12px;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.8);
     opacity: 1;
     transition: opacity 0.3s;
     z-index: 10; /* Ensures tooltip appears above everything */
@@ -168,38 +185,47 @@ p br {
     left: 0; /* Aligns the tooltip's start with the word's start */
     bottom: 120%; /* Places tooltip above the word */
     transform: none; /* Removes horizontal translation */
+
+    /* Add transparency for backdrop blur to work */
+    background-color: rgba(191, 226, 247, 0.85); /* Adjust for each element */
+    backdrop-filter: blur(5px); /* Applies blur effect to background */
+    -webkit-backdrop-filter: blur(5px); /* Ensures compatibility with WebKit browsers */
 }
 
 .sound:hover::after {
-    background-color: #BFE2F7;
-    color: #093049;
-    border: 1px solid #093049;
+    background-color: rgba(133, 241, 255, 0.25); /* Light blue with transparency */
+    color: white;
+    border: 2px solid #00e2ff;
+    box-shadow: 4px 7px 10px rgba(0, 0, 0, 0.5);
 }
 
 .position:hover::after {
-    background-color: #e4ffde;
-    color: #215B26;
-    border: 1px solid #215B26;
+    background-color: rgba(228, 255, 222, 0.25); /* Light green with transparency */
+    color: white;
+    border: 2px solid #00ff59;
+    box-shadow: 4px 7px 10px rgba(0, 0, 0, 0.5);
 }
 
 .choice:hover::after {
-    background-color: #ffdef3;
-    color: #4c1538;
-    border: 1px solid #4c1538;
+    background-color: rgba(255, 133, 237, 0.25); /* Light pink with transparency */
+    color: #fff;
+    border: 2px solid #ff85ed;
+    box-shadow: 4px 7px 10px rgba(0, 0, 0, 0.5);
 }
 
 .context:hover::after {
-    background-color: #d7dce5;
-    color: #28303E;
-    border: 1px solid #28303E;
+    background-color: rgba(215, 220, 229, 0.25); /* Light grey with transparency */
+    color: white;
+    border: 2px solid #9bb6c2;
+    box-shadow: 4px 7px 10px rgba(0, 0, 0, 0.5);
 }
 
 
 .translation-number {
     font-size: 14px;
-    color: grey;
-    background-color: hsla(0, 0%, 100%, 0.637);
-    border: 1px solid slategrey;
+    color: #2f353f;
+    background-color: hwb(212 91% 3% / 0.8);
+    border: 1px solid #77869b;
     line-height: 20px;
     padding-left: 1px;
     padding-right: 1px;

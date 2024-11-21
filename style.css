@@ -1,59 +1,68 @@
-/* Basic styles for the website */
-
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
-    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full screen height */
+    background-color: #212630;
 }
 
-header {
-    width: 100%;
-    background-color: #4CAF50;
-    box-sizing: border-box;
-    padding: 20px;
-    font-size: 20px;
-    font-weight: bold;
+/* Main Container */
+.container {
     text-align: center;
-    color: white;
-    z-index: 1000;
-}
-
-main {
+    width: 100%;
+    max-width: 700px;
     padding: 20px;
 }
 
-/* Remove bullet points from the list */
-a {
-    list-style-type: none; /* Removes bullet points */
-    padding: 0; /* Removes default padding */
-    margin: 0; /* Removes default margin */
+/* Header Styles */
+header h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: white;
+    font-weight: bold;
 }
 
-/* Add line spacing to list items */
-a {
-    margin-right: 10px; /* Adds space to the right of each list item */
+/* Grid Container */
+.home-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    grid-gap: 20px; /* Spacing between items */
+    padding: 20px;
+    background: #363f52;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Optional: Style the links as buttons */
-a {
-    display: inline-block; /* Makes the link behave like a button */
-    padding: 10px 20px; /* Adds padding to the link */
-    background-color: #4CAF50; /* Background color for the link */
-    color: white; /* Text color */
-    text-decoration: none; /* Remove underline */
-    border-radius: 5px; /* Rounded corners */
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition effect */
+/* Grid Items */
+.grid-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    border-radius: 10px; /* Apply rounded corners once */
+    background-color: #212630;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    border: 3px #1fcd54 solid;
+    transition: background-color 0.2s ease, border 0.2s ease; /* Smooth transition for background and transform */
 }
 
-/* Hover effect for the links */
-a:hover {
-    background-color: #4CAF50; /* Darker green on hover */
-    transform: scale(1.2); /* Increase size by 10% on hover */
+/* Hover Effect */
+.grid-item:hover {
+    background-color: #1fcd54;
+		border: 3px #212630 solid;
 }
 
-/* Add vertical spacing to the links */
-ul li {
-    margin-bottom: 10px; /* Adds space below each list item */
+/* Responsive Design */
+@media (max-width: 600px) {
+    .home-grid {
+        grid-template-columns: 1fr; /* Single column for smaller screens */
+        grid-gap: 15px;
+    }
 }

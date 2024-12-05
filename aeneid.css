@@ -97,6 +97,8 @@ strong {
     line-height: 20px;
 }
 
+
+
 #latin1, #english1 {
     height: 260px;
 }
@@ -144,20 +146,21 @@ strong {
 .sound, .position, .choice, .context {
     position: relative;
     display: inline-block;
+    padding-left: 0.5px;
+    padding-right: 0.5px;
     border-radius: 4px;
-    padding: 1px;
     color: #333; /* Ensure this color contrasts with the background */
     z-index: 3; /* Base layer for the text */
 }
 
 .sound {
-  background-color: rgb(118, 205, 235);
+  background-color: #76cdeb;
 }
 .position {
-  background-color: lightgreen;
+  background-color: #90ee90;
 }
 .choice {
-  background-color: lightpink;
+  background-color: #ffb6c1;
 }
 .context {
   background-color: #b8cadb;

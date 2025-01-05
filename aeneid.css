@@ -2,31 +2,45 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #ffffff;
+    color: #1a1a1a;
+    z-index: 1;
+    transition: background-color 0.2s, color 0.2s ease-in-out;
+}
+body.theme-dark {
     background-color: #212630;
     color: white;
-    z-index: 1;
-    width: 725px;
 }
+
 
 header {
     position: fixed;
-    margin-top: -20px;
-    width: 100vw;
-    background-color: #363f52;
+    margin-top: 0px;
+    width: 100%;
+    background-color: #e1e4eb;
     box-sizing: border-box;
     padding: 10px;
     font-size: 15px;
     text-align: center;
-    color: white;
+    color: #3d3e41;
     backdrop-filter: blur(3px);
-    box-shadow: 0 7px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 7px 10px rgba(0, 0, 0, 0.2);
     z-index: 1000;
 }
+body.theme-dark header {
+    background-color: #363f52;
+    color: white;
+}
+
 
 #false-header {
     position: relative;
-    margin-top: 20px;
-    width: 100vw;
+    margin-top: 0px;
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 15px;
+    text-align: center;
+    width: 100%;
     z-index: 2;
 }
 
@@ -34,14 +48,15 @@ h1 {
     font-size: 20px;
     padding: 0px;
 }
-h4 {
-    margin: 0;
-    padding: 0;
-}
+
+
 strong {
     font-family: Arial, sans-serif;
     font-size: 20px;
     font-weight: medium;
+    color: #3d3e41;
+}
+body.theme-dark strong {
     color: white;
 }
 
@@ -55,17 +70,23 @@ strong {
 }
 
 .l-button, .r-button {
-    background-color: #212630;
-    color: white;
+    background-color: white;
+    color: #6c6d70;
     text-decoration: none;
     border: none;
     padding: 8px 8px;
     font-size: 16px;
     cursor: pointer;
-    font-weight: bold;
+    font-weight:bold;
     border: 3px #1fcd54 solid;
     transition: background-color 0.2s ease, border 0.2s ease;
 }
+body.theme-dark .l-button, body.theme-dark .r-button {
+    border: 3px #1fcd54 solid;
+    background-color: #212630;
+    color: white;
+}
+
 .l-button {
     border-radius: 20px 3px 3px 20px;
 }
@@ -73,9 +94,15 @@ strong {
     border-radius: 3px 20px 20px 3px;
 }
 .l-button:hover, .r-button:hover {
+    background-color: gainsboro;
+    border: 3px #1fcd54 solid;
+}
+body.theme-dark .l-button:hover, body.theme-dark .r-button:hover {
     background-color: #1fcd54;
     border: 3px #212630 solid;
+    color: white;
 }
+
 
 #key {
     margin-top: 0px;
@@ -96,6 +123,7 @@ strong {
     white-space: nowrap;
     line-height: 20px;
 }
+
 
 
 
@@ -149,6 +177,7 @@ strong {
     padding-left: 0.5px;
     padding-right: 0.5px;
     border-radius: 4px;
+    cursor: none;
     color: #333; /* Ensure this color contrasts with the background */
     z-index: 3; /* Base layer for the text */
 }
@@ -156,25 +185,45 @@ strong {
 .sound {
   background-color: #76cdeb;
 }
+.sound.clicked {
+    outline: 1px #1f8dcd dashed;
+}
+
 .position {
   background-color: #90ee90;
 }
+.position.clicked {
+    outline: 1px #1f8f1b dashed;
+}
+
 .choice {
   background-color: #ffb6c1;
 }
+.choice.clicked {
+    outline: 1px #9b0f50 dashed;
+}
+
 .context {
   background-color: #b8cadb;
 }
+.context.clicked {
+    outline: 1px #46535c dashed;
+}
+
 
 .sound:hover {background-color: deepskyblue;}
 .position:hover {background-color: mediumspringgreen;}
 .choice:hover {background-color: hotpink;}
 .context:hover {background-color: lightslategrey;}
 
-.sound:hover::after, 
-.position:hover::after, 
-.choice:hover::after, 
-.context:hover::after { 
+.sound:hover::after,
+.position:hover::after,
+.choice:hover::after,
+.context:hover::after,
+.sound.clicked::after,
+.position.clicked::after,
+.choice.clicked::after,
+.context.clicked::after { 
     content: attr(title);
     white-space: nowrap;
     position: absolute;
@@ -182,10 +231,11 @@ strong {
     padding: 5px;
     border-radius: 5px;
     font-size: 12px;
+    color: white;
     text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.8);
     opacity: 1;
     transition: opacity 0.3s;
-    z-index: 10; /* Ensures tooltip appears above everything */
+    z-index: 11; /* Ensures tooltip appears above everything */
     
     /* Positioning tooltip above the word */
     left: 0; /* Aligns the tooltip's start with the word's start */
@@ -198,30 +248,31 @@ strong {
     -webkit-backdrop-filter: blur(5px); /* Ensures compatibility with WebKit browsers */
 }
 
-.sound:hover::after {
-    background-color: rgba(133, 241, 255, 0.25); /* Light blue with transparency */
-    color: white;
+
+.sound:hover::after,
+.sound.clicked::after {
+    background-color: hsla(194, 100%, 75%, 0.5);
     border: 2px solid #00e2ff;
     box-shadow: 4px 7px 10px rgba(0, 0, 0, 0.5);
 }
 
-.position:hover::after {
-    background-color: rgba(228, 255, 222, 0.25); /* Light green with transparency */
-    color: white;
+.position:hover::after,
+.position.clicked::after {
+    background-color: hsla(128, 100%, 75%, 0.5);
     border: 2px solid #00ff59;
     box-shadow: 4px 7px 10px rgba(0, 0, 0, 0.5);
 }
 
-.choice:hover::after {
-    background-color: rgba(255, 133, 237, 0.25); /* Light pink with transparency */
-    color: #fff;
+.choice:hover::after,
+.choice.clicked::after {
+    background-color: hsla(308, 100%, 75%, 0.5);
     border: 2px solid #ff85ed;
     box-shadow: 4px 7px 10px rgba(0, 0, 0, 0.5);
 }
 
-.context:hover::after {
-    background-color: rgba(215, 220, 229, 0.25); /* Light grey with transparency */
-    color: white;
+.context:hover::after,
+.context.clicked::after {
+    background-color: hsla(219, 21%, 75%, 0.5);
     border: 2px solid #9bb6c2;
     box-shadow: 4px 7px 10px rgba(0, 0, 0, 0.5);
 }
@@ -231,7 +282,7 @@ strong {
     font-size: 14px;
     color: #2f353f;
     background-color: hwb(212 91% 3% / 0.8);
-    border: 1px solid #77869b;
+    border: 1px solid #98a8bd;
     line-height: 20px;
     padding-left: 1px;
     padding-right: 1px;
@@ -249,4 +300,29 @@ strong {
 
 #paragraphSelector {
     padding: 10px;
+}
+
+
+/* Theme Toggle Button */
+#theme-toggle {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px; /* Icon size */
+    color: inherit; /* Matches current text color */
+    transition: color 0.3s ease; /* Smooth transition for icon color */
+    z-index: 1000;
+}
+
+/* Moon Icon */
+.icon-moon::before {
+    content: "🌙"; /* Unicode for moon */
+}
+
+/* Sun Icon */
+.icon-sun::before {
+    content: "☀️"; /* Unicode for sun */
 }

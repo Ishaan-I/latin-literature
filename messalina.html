@@ -10,7 +10,7 @@
 </head>
 <body>
     <header>
-        <h1>Messalina - Lines 12 - 123</h1>
+        <h1>Messalina - Lines 1 - 89</h1>
         <div class="pill-container">
             <button class="l-button" onclick="translateText()">Translate</button>
             <button class="r-button" onclick="toggleGuidedTranslation()">Toggle Guided Translation</button>
@@ -19,16 +19,19 @@
             <a class="l-button" href="index.html">Home</a>
             <a class="r-button" href="mvocab.html">Vocab</a>
         </div>
+        <button id="theme-toggle" onclick="toggleDarkMode()" aria-label="Toggle Theme">
+            <span id="theme-icon" class="icon-sun"></span> <!-- Default to moon icon -->
+        </button>
     </header>
   <div id="false-header">
     <h1>Messalina - Lines 1 - 89</h1>
         <div class="pill-container">
-            <button class="l-button" onclick="translateText()">Translate</button>
-            <button class="r-button" onclick="toggleGuidedTranslation()">Toggle Guided Translation</button>
+            <button class="l-button">Translate</button>
+            <button class="r-button">Toggle Guided Translation</button>
         </div>
         <div class="pill-container">
-            <a class="l-button" href="index.html">Home</a>
-            <a class="r-button" href="mvocab.html">Vocab</a>
+            <a class="l-button">Home</a>
+            <a class="r-button">Vocab</a>
         </div>
   </div>
   
@@ -57,16 +60,16 @@
         </p>
         <p id="latin2">
             <strong>Lines 8-17</strong><br>
-            <span style="margin-left: 300px;">illa <span class="choice" title="litotes">non fu</span><span class="position" title="Emphatic positioning">rtim</span><br></span>
-            sed multis cum comitibus <span class="choice" title="historic present - more vivid">ventitat</span> <span class="position" title="delay of domum highlights that she is obviously going to his house">domum</span><span class="position" title="Bs are juxtabosed to show that Messalina is with S all the time">, egredienti</span><br>
-            adhaeret, dat opes honoresque; postremo <span class="choice" title="tricolon">servi, liberti,</span><br>
-            <span class="sound" title="condemnation through p sounds">p</span><span class="choice" title="3rd part of tricolon is different - surprising">aratus</span> <span class="sound" title="condemnation through p sounds">p</span><span class="choice" title="reminder of adultery">rincipis</span> apud adulterum saepe videbantur.<br>
-            at Claudius matrimonii sui <span class="choice" title="variatio - different to nescius in previous passage">ignarus</span>. iam Messalina <span class="position" title="balanced phrasing">propter facilitatem</span><br>
-            <span class="position" title="balanced phrasing">adulteriorum ad novas </span><span class="choice" title="strong CoW">libidines</span><br>
-            versa est. Silius, sive <span class="choice" title="strong CoW">fatali</span> <span class="choice" title="strong CoW">insania</span> an ipsa <span class="choice" title="polyptoton">pericula</span><br>
-            re<span class="sound" title="solemn gloomy tone through m sounds">m</span>ediu<span class="sound" title="solemn gloomy tone through m sounds">m</span> i<span class="sound" title="solemn gloomy tone through m sounds">mm</span>inentiu<span class="sound" title="solemn gloomy tone through m sounds">m</span> <span class="choice" title="polyptoton">periculoru</span><span class="sound" title="solemn gloomy tone through m sounds">m</span> ratus, <span class="position" title="emphatic positioning, promoted - focus on action & intensity">abrumpi</span><br>
-            dissimulationem <span class="choice" title="forceful CoW">urgebat</span>: quippe non exspectandum,<br>
-            dum princeps senesceret.
+            <span style="margin-left: 300px;"><span class="translation-number">1</span>illa <span class="choice" title="litotes"><span class="translation-number">5</span>non <span class="translation-number">5</span>fu</span><span class="position" title="Emphatic positioning">rtim</span><br></span>
+            <span class="translation-number">6</span>sed <span class="translation-number">8</span>multis <span class="translation-number">7</span>cum <span class="translation-number">9</span>comitibus <span class="choice" title="historic present - more vivid"><span class="translation-number">2</span>ventitat</span> <span class="position" title="delay of domum highlights that she is obviously going to his house"><span class="translation-number">3</span>domum</span><span class="position" title="Bs are juxtabosed to show that Messalina is with S all the time">, <span class="translation-number">11</span>egredienti</span><br>
+            <span class="translation-number">10</span>adhaeret, <span class="translation-number">12</span>dat <span class="translation-number">13</span>opes <span class="translation-number">15</span>honores<span class="translation-number">14</span>que; <span class="translation-number">1</span>postremo <span class="choice" title="tricolon"><span class="translation-number">2</span>servi, <span class="translation-number">3</span>liberti,</span><br>
+            <span class="sound" title="condemnation through p sounds"><span class="translation-number">4</span>p</span><span class="choice" title="3rd part of tricolon is different - surprising">aratus</span> <span class="sound" title="condemnation through p sounds"><span class="translation-number">5</span>p</span><span class="choice" title="reminder of adultery">rincipis</span> <span class="translation-number">8</span>apud <span class="translation-number">9</span>adulterum <span class="translation-number">6</span>saepe <span class="translation-number">7</span>videbantur.<br>
+            <span class="translation-number">1</span>at <span class="translation-number">2</span>Claudius <span class="translation-number">5</span>matrimonii <span class="translation-number">4</span>sui <span class="choice" title="variatio - different to nescius in previous passage"><span class="translation-number">3</span>ignarus</span>.<br>
+            <span class="translation-number">1</span>iam <span class="translation-number">2</span>Messalina <span class="position" title="balanced phrasing"><span class="translation-number">3</span>propter <span class="translation-number">4</span>facilitatem</span> <span class="position" title="balanced phrasing"><span class="translation-number">5</span>adulteriorum <span class="translation-number">7</span>ad <span class="translation-number">8</span>novas </span><span class="choice" title="strong CoW"><span class="translation-number">9</span>libidines</span><br>
+            <span class="translation-number">6</span>versa est. <span class="translation-number">1</span>Silius, <span class="translation-number">2</span>sive <span class="choice" title="strong CoW"><span class="translation-number">3</span>fatali</span> <span class="choice" title="strong CoW"><span class="translation-number">4</span>insania</span> <span class="translation-number">5</span>an <span class="translation-number">7</span>ipsa <span class="choice" title="polyptoton"><span class="translation-number">8</span>pericula</span><br>
+            <span class="sound" title="solemn gloomy tone through m sounds"><span class="translation-number">9</span>remedium <span class="translation-number">10</span>imminentium</span> <span class="choice" title="polyptoton"><span class="translation-number">11</span>periculoru</span><span class="sound" title="solemn gloomy tone through m sounds">m</span> <span class="translation-number">6</span>ratus, <span class="position" title="emphatic positioning, promoted - focus on action & intensity"><span class="translation-number">14</span>abrumpi</span><br>
+            <span class="translation-number">13</span>dissimulationem <span class="choice" title="forceful CoW"><span class="translation-number">12</span>urgebat</span>: <span class="translation-number">1</span>quippe <span class="translation-number">2</span>non <span class="translation-number">3</span>exspectandum,<br>
+            <span class="translation-number">4</span>dum <span class="translation-number">5</span>princeps <span class="translation-number">6</span>senesceret.
         </p>
         <p id="latin3">
             <strong>Lines 17-26</strong><br>

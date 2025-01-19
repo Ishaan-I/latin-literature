@@ -3,48 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Avunculus Meus</title>
+    <title>Avunculus meus</title>
     <link rel="stylesheet" href="pliny.css">
     <script src="pliny.js"></script>
     <link rel="icon" type="image/jpg" href="favicon.svg">
 </head>
 <body>
     <header>
-        <h1>Avunculus Meus - Lines 1 - 23</h1>
-        <button onclick="translateText()">Translate</button>
-        <a href="index.html">Home</a>
-        <a href="pvocab.html">Vocab</a>
+        <h1>Pliny - Lines 1 - 23</h1>
+        <div class="pill-container">
+            <button class="l-button" onclick="translateText()">Translate</button>
+            <button class="r-button" onclick="toggleGuidedTranslation()">Toggle Guided Translation</button>
+        </div>
+        <div class="pill-container">
+            <a class="l-button" href="index.html">Home</a>
+            <a class="r-button" href="avocab.html">Vocab</a>
+        </div>
+        <button id="theme-toggle" onclick="toggleDarkMode()" aria-label="Toggle Theme">
+            <span id="theme-icon" class="icon-sun"></span> <!-- Default to moon icon -->
+        </button>
     </header>
+  <div id="false-header">
+    <h1>Pliny - Lines 1 - 23</h1>
+        <div class="pill-container">
+            <button class="l-button">Translate</button>
+            <button class="r-button">Toggle Guided Translation</button>
+        </div>
+        <div class="pill-container">
+            <a class="l-button">Home</a>
+            <a class="r-button">Vocab</a>
+        </div>
+  </div>
+  
+    <div id="content">
     <div id="key">
-        <br><br><br><br><br><br><br>
         <strong>Word Type Key:</strong><br>
         <ul>
-            <li><span class="noun">Noun</span><br></li>
-            <li><span class="verb">Verb</span><br></li>
-            <li><span class="adj">Adjective</span><br></li>
-            <li><span class="adv">Adverb</span><br></li>
-            <li><span class="pro">Pronoun</span><br></li>
-            <li><span class="pre">Preposition</span><br></li>
-            <li><span class="con">Conjunction</span></li>
+            <li><span class="sound" title="refers to literary techniques involving how the words are pronounced">Sound</span><br></li>
+            <li><span class="choice" title="refers to literary techniques involving what kinds of words are used">Choice of Words</span><br></li>
+            <li><span class="position" title="refers to literary techniques involving where a word is placed">Position</span><br></li>
+            <li><span class="context" title="gives explanations on characters and certain words">Context</span><br></li>
         </ul>
     </div>
 
     <div id="pliny">
         <p id="latin1">
             <strong>Lines 1-12</strong><br>
-            ante lucem ibat ad Vespasianum imperatorem (nam ille quoque<br>
-            noctibus utebatur), deinde ad officium sibi delegatum.<br>
-            reversus domum reliquum tempus studiis dabat.<br>
-            saepe post cibum (qui veterum more interdiu levis<br>
-            et facilis erat) aestate, si quid otii erat, iacebat in sole,<br>
-            liber legebatur, adnotabat excerpebatque. nihil enim legit<br>
-            quod non excerperet; dicere etiam solebat nullum librum<br>
-            esse tam malum ut non aliqua parte prodesset. post solem<br>
-            plerumque aqua frigida lavabatur, deinde gustabat<br>
-            dormiebatque minimum; mox quasi alio die studebat<br>
-            in cenae tempus. super cenam liber legebatur adnotabatur,<br>
-            et quidem cursim.
-            <br><br><br><br><br>
+            <span class="translation-number">1</span>ante <span class="translation-number">2</span>lucem <span class="translation-number">3</span>ibat <span class="translation-number">4</span>ad <span class="translation-number">6</span>Vespasianum <span class="translation-number">5</span>imperatorem (<span class="translation-number">7</span>nam <span class="translation-number">8</span>ille <span class="translation-number">9</span>quoque<br>
+            <span class="translation-number">11</span>noctibus <span class="translation-number">10</span>utebatur), <span class="translation-number">12</span>deinde <span class="translation-number">13</span>ad <span class="translation-number">14</span>officium <span class="translation-number">16</span>sibi <span class="translation-number">15</span>delegatum.<br>
+            <span class="translation-number">1</span>reversus <span class="translation-number">2</span>domum <span class="translation-number">4</span>reliquum <span class="translation-number">6</span>tempus <span class="translation-number">6</span>studiis <span class="translation-number">3</span>dabat.<br>
+            <span class="translation-number">1</span>saepe <span class="translation-number">2</span>post <span class="translation-number">3</span>cibum (<span class="translation-number">4</span>qui <span class="translation-number">6</span>veterum <span class="translation-number">5</span>more <span class="translation-number">7</span>interdiu <span class="translation-number">9</span>levis<br>
+            <span class="translation-number">10</span>et <span class="translation-number">11</span>facilis <span class="translation-number">8</span>erat) <span class="translation-number">12</span>aestate, <span class="translation-number">13</span>si <span class="translation-number">15</span>quid <span class="translation-number">16</span>otii <span class="translation-number">14</span>erat, <span class="translation-number">17</span>iacebat <span class="translation-number">18</span>in <span class="translation-number">19</span>sole,<br>
+            <span class="translation-number">20</span>liber <span class="translation-number">21</span>legebatur, <span class="translation-number">22</span>adnotabat <span class="translation-number">24</span>excerpebat<span class="translation-number">23</span>que. <span class="translation-number">3</span>nihil <span class="translation-number">1</span>enim <span class="translation-number">2</span>legit<br>
+            <span class="translation-number">4</span>quod <span class="translation-number">5</span>non <span class="translation-number">6</span>excerperet; <span class="translation-number">3</span>dicere <span class="translation-number">1</span>etiam <span class="translation-number">2</span>solebat <span class="translation-number">4</span>nullum <span class="translation-number">5</span>librum<br>
+            <span class="translation-number">6</span>esse <span class="translation-number">7</span>tam <span class="translation-number">8</span>malum <span class="translation-number">9</span>ut <span class="translation-number">10</span>non <span class="translation-number">12</span>aliqua <span class="translation-number">13</span>parte <span class="translation-number">11</span>prodesset. <span class="translation-number">1</span>post <span class="translation-number">2</span>solem<br>
+            <span class="translation-number">3</span>plerumque <span class="translation-number">6</span>aqua <span class="translation-number">5</span>frigida <span class="translation-number">4</span>lavabatur, <span class="translation-number">7</span>deinde <span class="translation-number">8</span>gustabat<br>
+            <span class="translation-number">10</span>dormiebat<span class="translation-number">9</span>que <span class="translation-number">11</span>minimum; <span class="translation-number">1</span>mox <span class="translation-number">2</span>quasi <span class="translation-number">3</span>alio <span class="translation-number">4</span>die <span class="translation-number">5</span>studebat<br>
+            <span class="translation-number">6</span>in <span class="translation-number">8</span>cenae <span class="translation-number">7</span>tempus. <span class="translation-number">1</span>super <span class="translation-number">2</span>cenam <span class="translation-number">3</span>liber <span class="translation-number">4</span>legebatur <span class="translation-number">5</span>adnotabatur,<br>
+            <span class="translation-number">(6)</span>et <span class="translation-number">7</span>quidem <span class="translation-number">8</span>cursim.
         </p>
         <p id="latin2">
             <strong>Lines 13-23</strong><br>
@@ -58,8 +74,7 @@
             qua ex causa Romae quoque sella vehebatur. repeto<br>
             me correptum ab eo, quod ambularem: 'poteras' inquit<br>
             'has horas non perdere'; nam perire omne tempus<br>
-            arbitrabatur, quod studiis non impenderetur. vale.<br>
-            <br><br><br><br>
+            arbitrabatur, quod studiis non impenderetur. vale.
         </p>
     </div>
 

@@ -3,70 +3,105 @@ body {
     margin: 0;
     padding: 0;
     background-color: #ffffff;
-    color: #333;
-    white-space: nowrap;
+    color: #1a1a1a;
+    width: 710px;
+    z-index: 1;
+    transition: background-color 0.2s, color 0.2s ease-in-out;
 }
+body.theme-dark {
+    background-color: #212630;
+    color: white;
+}
+
 
 header {
     position: fixed;
     margin-top: 0px;
     width: 100%;
-    background-color: #4CAF50;
+    background-color: #e1e4eb;
     box-sizing: border-box;
     padding: 10px;
     font-size: 15px;
     text-align: center;
-    color: white;
+    color: #3d3e41;
+    box-shadow: 0 7px 10px rgba(0, 0, 0, 0.2);
     z-index: 1000;
 }
+body.theme-dark header {
+    background-color: #363f52;
+    color: white;
+}
+
+
+#false-header {
+    position: relative;
+    margin-top: 0px;
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 15px;
+    text-align: center;
+    width: 100%;
+    z-index: 2;
+}
+
 h1 {
     font-size: 20px;
+    padding: 0px;
 }
-h4 {
-    margin: 0;
-    padding: 0;
-}
+
 strong {
+    font-family: Arial, sans-serif;
     font-size: 20px;
-    font-weight: normal;
-    color: gray;
+    font-weight: medium;
+    color: #3d3e41;
+}
+body.theme-dark strong {
+    color: white;
 }
 
-button {
-    background-color: white; /* Background color of the button */
-    color: #45a049; /* Text color */
-    border: none; /* Removes border */
-    padding: 10px 10px; /* Adjusts padding for pill shape */
-    text-align: center; /* Centers text */
-    text-decoration: none; /* Removes underline from links if used */
-    display: inline-block; /* Ensures proper button layout */
-    font-size: 16px; /* Font size of the text */
-    cursor: pointer; /* Changes cursor to pointer on hover */
-    border-radius: 50px; /* Creates the pill shape */
-    transition: transform 0.3s ease; /* Adds smooth hover effect */
-  }
-  
-  /* Hover effect */
- button:hover {
-    transform: scale(1.1); /* Darkens the button on hover */
-  }
 
-a {
-    background-color: white; /* Background color of the button */
-    color: #45a049; /* Text color */
-    border: none; /* Removes border */
-    padding: 10px 10px; /* Adjusts padding for pill shape */
-    text-align: center; /* Centers text */
-    text-decoration: none; /* Removes underline from links if used */
-    display: inline-block; /* Ensures proper button layout */
-    font-size: 16px; /* Font size of the text */
-    cursor: pointer; /* Changes cursor to pointer on hover */
-    border-radius: 50px; /* Creates the pill shape */
-    transition: transform 0.3s ease; /* Adds smooth hover effect */
+.pill-container {
+    display: inline-flex;
+    padding: none;
+    border-radius: 50px;
+    gap: 2px; /* Space between buttons/links */
+    margin: 5px;
 }
-a:hover {
-    transform: scale(1.1); /* Increase size by 10% on hover */
+
+.l-button, .r-button {
+    background-color: white;
+    color: #6c6d70;
+    text-decoration: none;
+    border: none;
+    padding: 8px 8px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight:bold;
+    border: 3px #1fcd54 solid;
+    transition: background-color 0.2s ease, border 0.2s ease;
 }
+body.theme-dark .l-button, body.theme-dark .r-button {
+    border: 3px #1fcd54 solid;
+    background-color: #212630;
+    color: white;
+}
+
+.l-button {
+    border-radius: 20px 3px 3px 20px;
+}
+.r-button {
+    border-radius: 3px 20px 20px 3px;
+}
+.l-button:hover, .r-button:hover {
+    background-color: gainsboro;
+    border: 3px #1fcd54 solid;
+}
+body.theme-dark .l-button:hover, body.theme-dark .r-button:hover {
+    background-color: #1fcd54;
+    border: 3px #212630 solid;
+    color: white;
+}
+
 
 #key {
     margin-top: 0px;
@@ -84,7 +119,26 @@ a:hover {
 
 #pliny {
     margin: 10px;
+    white-space: nowrap;
+    line-height: 20px;
 }
+
+
+
+
+#latin1, #english1 {
+    height: 340px;
+}
+#latin2, #english2 {
+    height: 330px;
+}
+
+
+
+#content {
+    margin-top: 25px;
+}
+
 #controls {
     margin: 20px;
 }
@@ -92,29 +146,188 @@ a:hover {
 .hidden {
     display: none;
 }
-.noun {
-    color: blue;
-}
-.verb {
-    color: green;
-}
-.adj {
-    color: orange;
-}
-.adv {
-    color: orangered;
-}
-.pro {
-    color: red;
-}
-.pre {
-    color: magenta;
-}
-.con {
-    color: purple;
+
+.sound, .position, .choice, .context {
+    position: relative;
+    display: inline-block;
+    padding-left: 0.5px;
+    padding-right: 0.5px;
+    border-radius: 4px;
+    cursor: none;
+    color: #333; /* Ensure this color contrasts with the background */
+    z-index: 3; /* Base layer for the text */
 }
 
+.sound {
+  background-color: #76cdeb;
+}
+.sound.clicked {
+    outline: 1px #1f8dcd dashed;
+}
+
+.position {
+  background-color: #90ee90;
+}
+.position.clicked {
+    outline: 1px #1f8f1b dashed;
+}
+
+.choice {
+  background-color: #ffb6c1;
+}
+.choice.clicked {
+    outline: 1px #9b0f50 dashed;
+}
+
+.context {
+  background-color: #b8cadb;
+}
+.context.clicked {
+    outline: 1px #46535c dashed;
+}
+
+
+.sound:hover {background-color: deepskyblue;}
+.position:hover {background-color: mediumspringgreen;}
+.choice:hover {background-color: hotpink;}
+.context:hover {background-color: lightslategrey;}
+
+.sound:hover::after,
+.position:hover::after,
+.choice:hover::after,
+.context:hover::after,
+.sound.clicked::after,
+.position.clicked::after,
+.choice.clicked::after,
+.context.clicked::after { 
+    content: attr(title);
+    white-space: nowrap;
+    position: absolute;
+    line-height: 18px;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 12px;
+    color: white;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.8);
+    opacity: 1;
+    transition: opacity 0.3s;
+    z-index: 11;
+    left: 0;
+    bottom: 120%;
+    transform: none;
+    background-color: rgba(191, 226, 247, 0.85);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+
+.sound:hover::after,
+.sound.clicked::after {
+    background-color: hsla(194, 100%, 75%, 0.5);
+    border: 2px solid #00e2ff;
+    box-shadow: 4px 7px 10px rgba(0, 0, 0, 0.5);
+}
+
+.position:hover::after,
+.position.clicked::after {
+    background-color: hsla(128, 100%, 75%, 0.5);
+    border: 2px solid #00ff59;
+    box-shadow: 4px 7px 10px rgba(0, 0, 0, 0.5);
+}
+
+.choice:hover::after,
+.choice.clicked::after {
+    background-color: hsla(308, 100%, 75%, 0.5);
+    border: 2px solid #ff85ed;
+    box-shadow: 4px 7px 10px rgba(0, 0, 0, 0.5);
+}
+
+.context:hover::after,
+.context.clicked::after {
+    background-color: hsla(219, 21%, 75%, 0.5);
+    border: 2px solid #9bb6c2;
+    box-shadow: 4px 7px 10px rgba(0, 0, 0, 0.5);
+}
+
+
+.translation-number {
+    font-size: 14px;
+    color: #2f353f;
+    background-color: hwb(212 91% 3% / 0.8);
+    border: 1px solid #98a8bd;
+    line-height: 20px;
+    padding-left: 1px;
+    padding-right: 1px;
+    border-radius: 4px;
+    margin-right: 1px;
+    margin-left: 1.5px;
+    position: relative;
+    transform: translateY(-0.5em);
+    display: none; /* Hidden by default */
+    z-index: 3;
+}
+.guided-on .translation-number {
+    display: inline;
+}
 
 #paragraphSelector {
     padding: 10px;
+}
+
+
+/* Theme Toggle Button */
+#theme-toggle {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 32px; /* Larger icon size */
+    z-index: 1000;
+    width: 50px; /* Fixed width */
+    height: 50px; /* Fixed height */
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the icon */
+    border-radius: 50%; /* Round button for the icon */
+    transition: background-color 0.3s ease, border 0.3s ease; /* Smooth transition */
+}
+
+/* Moon Icon */
+.icon-moon::before {
+    content: "🌙"; /* Unicode for moon */
+    font-size: 28px; /* Icon size */
+    color: inherit; /* Inherit the color from the button */
+}
+/* Sun Icon */
+.icon-sun::before {
+    content: "☀️"; /* Unicode for sun */
+    font-size: 28px; /* Icon size */
+    color: inherit; /* Inherit the color from the button */
+}
+
+body:not(.theme-dark) #theme-toggle {
+    color: #212630; /* Dark color for light mode */
+    background-color: rgba(255, 255, 255, 0.6); /* Semi-transparent white background for better visibility */
+}
+
+/* Button in dark mode */
+body.theme-dark #theme-toggle {
+    color: #ffffff; /* Light color for dark mode */
+    background-color: rgba(33, 39, 50, 0.7); /* Dark background for the button */
+}
+
+/* Ensure the icon is always visible */
+body:not(.theme-dark) .icon-moon::before {
+    color: #212630; /* Dark color in light mode */
+}
+body.theme-dark .icon-moon::before {
+    color: white; /* White color in dark mode */
+}
+body:not(.theme-dark) .icon-sun::before {
+    color: #212630; /* Dark color in light mode */
+}
+body.theme-dark .icon-sun::before {
+    color: white; /* White color in dark mode */
 }

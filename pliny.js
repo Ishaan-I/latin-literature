@@ -1,7 +1,7 @@
 function translateText() {
     const plinySection = document.getElementById('pliny');
     const plinyLatin = `
-        <p id="latin1">
+	<p id="latin1">
             <strong>Lines 1-12</strong><br>
             ante lucem ibat ad Vespasianum imperatorem (nam ille quoque<br>
             noctibus utebatur), deinde ad officium sibi delegatum.<br>
@@ -15,7 +15,6 @@ function translateText() {
             dormiebatque minimum; mox quasi alio die studebat<br>
             in cenae tempus. super cenam liber legebatur adnotabatur,<br>
             et quidem cursim.
-            <br><br><br><br><br>
         </p>
         <p id="latin2">
             <strong>Lines 13-23</strong><br>
@@ -29,8 +28,7 @@ function translateText() {
             qua ex causa Romae quoque sella vehebatur. repeto<br>
             me correptum ab eo, quod ambularem: 'poteras' inquit<br>
             'has horas non perdere'; nam perire omne tempus<br>
-            arbitrabatur, quod studiis non impenderetur. vale.<br>
-            <br><br><br><br>
+            arbitrabatur, quod studiis non impenderetur. vale.
         </p>
     `;
     const plinyEnglish = `
@@ -73,5 +71,61 @@ function translateText() {
         </p>
     `;
     
-    plinySection.innerHTML = plinySection.innerHTML.includes('Before dawn,') ? plinyLatin : plinyEnglish;
+    plinySection.innerHTML = plinySection.innerHTML.includes('Before') ? plinyLatin : plinyEnglish;
 }
+
+
+function toggleGuidedTranslation() {
+    const latinTextDiv = document.getElementById("pliny");
+    latinTextDiv.classList.toggle("guided-on");
+}
+
+
+function toggleDarkMode() {
+    const body = document.body;
+    body.classList.toggle('theme-dark');
+
+    const themeIcon = document.getElementById('theme-icon');
+    themeIcon.classList.toggle('icon-sun');  // Switch to sun icon when dark mode is activated
+    themeIcon.classList.toggle('icon-moon'); // Switch to moon icon when light mode is activated
+}
+
+
+
+// Load theme preference on page load
+document.addEventListener("DOMContentLoaded", () => {
+    const body = document.body;
+    const themeIcon = document.getElementById("theme-icon");
+    const savedTheme = localStorage.getItem("theme");
+
+    if (savedTheme === "dark") {
+        body.classList.add("theme-dark");
+        themeIcon.classList.add("icon-moon");
+    } else {
+        themeIcon.classList.add("icon-sun");
+    }
+});
+
+
+// Add click event listeners to all elements with the annotation classes
+document.addEventListener("DOMContentLoaded", () => {
+    const annotationElements = document.querySelectorAll(".sound, .position, .choice, .context");
+
+    annotationElements.forEach((element) => {
+        element.addEventListener("click", (event) => {
+            // Remove the 'clicked' class from all elements
+            annotationElements.forEach((el) => el.classList.remove("clicked"));
+
+            // Add the 'clicked' class to the clicked element
+            element.classList.add("clicked");
+
+            // Prevent the event from propagating further (to avoid body click)
+            event.stopPropagation();
+        });
+    });
+
+    // Remove 'clicked' class when clicking anywhere else on the page
+    document.addEventListener("click", () => {
+        annotationElements.forEach((el) => el.classList.remove("clicked"));
+    });
+});

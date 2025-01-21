@@ -127,37 +127,34 @@ body.theme-dark .l-button:hover, body.theme-dark .r-button:hover {
 
 
 
-
 #latin1, #english1 {
-    height: 260px;
+    height: 240px;
 }
 #latin2, #english2 {
-    height: 280px;
+    height: 240px;
 }
 #latin3, #english3 {
-    height: 300px;
+    height: 240px;
 }
 #latin4, #english4 {
-    height: 300px;
+    height: 360px;
 }
 #latin5, #english5 {
-    height: 300px;
+    height: 320px;
 }
 #latin6, #english6 {
-    height: 240px;
+    height: 320px;
 }
 #latin7, #english7 {
-    height: 260px;
-}
-#latin8, #english8 {
-    height: 240px;
-}
-#latin9, #english9 {
-    height: 280px;
-}
-#latin10, #english10 {
     height: 300px;
 }
+#latin8, #english8 {
+    height: 280px;
+}
+#latin9, #english9 {
+    height: 300px;
+}
+
 
 
 #content {
